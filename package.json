@@ -7,7 +7,9 @@
     "test": "jest",
     "lint": "eslint .",
     "ios": "react-native run-ios",
-    "android": "react-native run-android"
+    "android": "react-native run-android",
+    "react-devtools": "react-devtools",
+    "fflush": "watchman watch-del-all"
   },
   "dependencies": {
     "react": "16.8.6",
@@ -21,6 +23,7 @@
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.8.0",
     "babel-plugin-root-import": "^6.4.1",
+    "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.1.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.55.0",

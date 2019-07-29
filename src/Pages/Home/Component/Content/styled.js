@@ -7,7 +7,7 @@ export const Wrap = styled.View`
   background-color: rgba(221, 133, 133, 0.07);
   height: 100px
 `
-
+console.log(Wrap)
 export const Word = styled(Text)`
   height: 50px;
   font-size: 18px;
