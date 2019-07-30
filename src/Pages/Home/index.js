@@ -1,39 +1,31 @@
-import React, { Component, Fragment } from 'react'
-import { View, Button } from 'react-native'
+import * as React from 'react'
+import { Component, Fragment } from 'react'
+import { Platform } from 'react-native'
 
 import Image from '~/Components/ImagesComponent'
 
 import Content from './Component/Content'
 
-const BtnView = ({ children }) => {
-  return (
-    <View style={{
-      flex: 1,
-      width: 140,
-      minHeight: 55,
-      position: 'absolute',
-      zIndex: 1,
-      bottom: 30,
-      alignSelf: 'center',
-      justifyContent: 'center',
-      backgroundColor: 'rgba(0, 0, 0, 0.22)',
-    }}>
-      {children}
-    </View>
-  )
-}
+import {
+  BtnView,
+  Btn,
+} from './styled'
 
-export default class Home extends Component {
+const BtnCol = Platform.select({
+  ios: '#FFFBC4',
+  android: '',
+})
+
+class Home extends Component {
   render() {
     return (
       <Fragment>
         <Content />
         <Image source={require('~/images/meong.jpeg')}>
           <BtnView>
-            <Button
+            <Btn
               onPress={() => {}}
               title={'둘러보기'}
-              color="#FFFBC4"
             />
           </BtnView>
         </Image>
@@ -41,3 +33,5 @@ export default class Home extends Component {
     )
   }
 }
+
+export default Home

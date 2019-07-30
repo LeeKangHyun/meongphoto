@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noResolve": false,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "allowJs": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "android",
+    "ios"
+  ],
+  "include": [
+    "node_modules/@types",
+    "./src/**/*",
+    "./src/@types"
+  ]
+}

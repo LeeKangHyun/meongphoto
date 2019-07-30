@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from 'react'
+import * as React from 'react'
+import { Component, Fragment } from 'react'
 
-export default class PhotoList extends Component {
+class PhotoList extends Component {
   render() {
     return (
       <Fragment>
@@ -9,3 +10,5 @@ export default class PhotoList extends Component {
     )
   }
 }
+
+export default PhotoList

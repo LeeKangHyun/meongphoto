@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { NativeRouter, Route, Switch } from 'react-router-native'
 

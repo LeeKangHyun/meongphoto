@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import styled from 'styled-components/native'
 
-import { Fonts } from '~/Utils/Fonts'
+import { Fonts } from '~/Utils'
 
 export const Text = styled.Text`
   font-family: ${Fonts.BMDOHYEON};

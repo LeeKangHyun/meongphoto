@@ -1,6 +1,6 @@
 import { Platform } from 'react-native'
 
-export const Fonts = {
+export default {
   BMHANNA: Platform.select({
     ios: 'BMHANNAPro',
     android: 'BMHANNA',

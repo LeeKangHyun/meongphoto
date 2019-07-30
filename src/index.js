@@ -1,10 +1,13 @@
 // @flow
-import React, { Component } from 'react'
+import * as React from 'react'
+import { Component } from 'react'
 
 import Route from './config/route'
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return <Route />
   }
 }
+
+export default App
