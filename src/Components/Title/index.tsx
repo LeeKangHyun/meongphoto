@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
+import { TouchableOpacity } from 'react-native'
+import { Link } from 'react-router-native'
 
 import { TitleWrap, Title } from './styled'
 
@@ -12,7 +14,11 @@ const TitleComponent: FunctionComponent<Props> = ({
 }) => {
   return (
     <TitleWrap>
-      <Title>{label}</Title>
+      <Link
+        component={TouchableOpacity}
+        to={'/'}>
+        <Title>{label}</Title>
+      </Link>
     </TitleWrap>
   )
 }

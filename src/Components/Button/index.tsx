@@ -6,15 +6,17 @@ import {
 } from 'react-native'
 
 interface Props {
-  children: ReactNode
+  onPress?(): void
+  children: ReactNode | ReactNode[]
 }
 
 const ButtonComponent: FunctionComponent<Props> = ({
+  onPress,
   children,
 }) => {
   return (
     <View>
-      <Text>
+      <Text onPress={onPress}>
         {children}
       </Text>
     </View>

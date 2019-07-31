@@ -1,4 +1,3 @@
-import { Button } from 'react-native'
 import styled from 'styled-components/native'
 
 export const BtnView = styled.View`
@@ -11,9 +10,4 @@ export const BtnView = styled.View`
   align-self: center;
   justify-content: center;
   z-index: 1;
-`
-
-export const Btn = styled(Button)`
-  color: #FFFBC4;
-  background-color: transparent;
 `
