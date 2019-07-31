@@ -13,7 +13,7 @@ const RouteComponent = () => {
       <BackButton>
         <SafeArea>
           <Title label="댕댕쓰" />
-          
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/photo" component={Photo} />

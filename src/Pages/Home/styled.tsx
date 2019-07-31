@@ -6,7 +6,8 @@ export const BtnView = styled.View`
   bottom: 30px;
   width: 140px;
   min-height: 55px;
-  background-color: rgba(0, 0, 0, 0.22);
+  background-color: rgba(187, 136, 136, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.34);
   align-self: center;
   justify-content: center;
   z-index: 1;
