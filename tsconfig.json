@@ -1,28 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
+    "baseUrl": "./",
+    "target": "esnext",
+    "lib": [
+      "es6"
+    ],
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+      "*": [
+        "node_modules/*",
+        "*"
+      ]
+    },
+    "skipLibCheck": true,
     "moduleResolution": "node",
-    "noResolve": false,
-    "noImplicitAny": false,
+    "strict": true,
     "removeComments": false,
     "allowJs": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
+      "src/@types",
+      "node_modules/@types"
     ]
   },
-  "exclude": [
-    "node_modules",
-    "android",
-    "ios"
-  ],
   "include": [
     "node_modules/@types",
-    "./src/**/*",
-    "./src/@types"
+    "src/**/*",
+    "src/@types"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "android",
+    "ios"
   ]
 }

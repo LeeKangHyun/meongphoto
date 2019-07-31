@@ -1,8 +1,13 @@
 import * as React from 'react'
+import { FunctionComponent } from 'react'
 
 import { TitleWrap, Title } from './styled'
 
-export default ({
+type Props = {
+  label: string
+}
+
+const TitleComponent: FunctionComponent<Props> = ({
   label,
 }) => {
   return (
@@ -11,3 +16,5 @@ export default ({
     </TitleWrap>
   )
 }
+
+export default TitleComponent

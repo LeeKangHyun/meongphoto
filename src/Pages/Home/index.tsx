@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Component, Fragment } from 'react'
-import { Platform } from 'react-native'
 
 import Image from '~/Components/ImagesComponent'
 
@@ -10,11 +9,6 @@ import {
   BtnView,
   Btn,
 } from './styled'
-
-const BtnCol = Platform.select({
-  ios: '#FFFBC4',
-  android: '',
-})
 
 class Home extends Component {
   render() {
