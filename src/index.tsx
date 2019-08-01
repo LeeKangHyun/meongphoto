@@ -1,12 +1,18 @@
-import * as React from 'react'
-import { Component } from 'react'
+import { createStackNavigator, createAppContainer } from 'react-navigation'
 
-import Route from './config/route'
+import Home from '~/Pages/Home'
+import PhotoList from '~/Pages/PhotoList'
 
-class App extends Component {
-  render() {
-    return <Route />
-  }
-}
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+  },
+  PhotoList: {
+    screen: PhotoList,
+  },
+}, {
+  initialRouteName: 'Home',
+  headerMode: 'none',
+})
 
-export default App
+export default createAppContainer(AppNavigator)

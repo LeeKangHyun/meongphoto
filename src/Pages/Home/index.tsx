@@ -1,10 +1,12 @@
 import * as React from 'react'
-import { Component, Fragment } from 'react'
-import { Text, TouchableOpacity } from 'react-native'
-import { Link } from 'react-router-native'
+import { Component } from 'react'
+import { TouchableOpacity } from 'react-native'
+import { NavigationScreenProp } from 'react-navigation'
 
 import Image from '~/Components/ImagesComponent'
 import Button from '~/Components/Button'
+import Title from '~/Components/Title'
+import { Wrap } from '~/Components/Layout'
 
 import Content from './Component/Content'
 
@@ -12,23 +14,28 @@ import {
   BtnView,
 } from './styled'
 
-class Home extends Component {
+interface Props<P> {
+  navigation: NavigationScreenProp<P>
+}
+
+class Home<P> extends Component<Props<P>> {
   render() {
+    const { navigate } = this.props.navigation
     return (
-      <Fragment>
+      <Wrap>
+        <Title
+          label="댕댕쓰"
+          onPress={() => navigate('PhotoList')}
+        />
         <Content />
         <Image source={require('~/images/meong.jpeg')}>
           <BtnView>
-            <Link
-              component={TouchableOpacity}
-              to={'/photo'}>
-              <Button>
-                <Text>둘러보기</Text>
-              </Button>
-            </Link>
+            <TouchableOpacity>
+              <Button label="보러가기!!" color="#FFFBC4" />
+            </TouchableOpacity>
           </BtnView>
         </Image>
-      </Fragment>
+      </Wrap>
     )
   }
 }

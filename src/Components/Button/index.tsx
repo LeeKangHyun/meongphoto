@@ -1,27 +1,25 @@
 import * as React from 'react'
-import { ReactNode, FunctionComponent } from 'react'
-import {
-  View,
-  Text,
-} from 'react-native'
+import { FunctionComponent } from 'react'
+
+import { Wrap, Button } from './styled'
 
 interface Props {
+  color: string
+  label: string
   onPress?(): void
-  children: ReactNode | ReactNode[]
 }
 
 const ButtonComponent: FunctionComponent<Props> = ({
+  label, color,
   onPress,
-  children,
 }) => {
   return (
-    <View>
-      <Text onPress={onPress}>
-        {children}
-      </Text>
-    </View>
+    <Wrap>
+      <Button onPress={onPress} color={color}>
+        {label}
+      </Button>
+    </Wrap>
   )
 }
 
 export default ButtonComponent
-

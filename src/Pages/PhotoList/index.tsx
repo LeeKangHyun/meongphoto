@@ -4,38 +4,7 @@ import { Text, View, Platform, Linking } from 'react-native'
 
 interface Props {}
 
-interface State {
-  data: object
-}
-
-class PhotoList extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      data: {},
-    }
-  }
-
-  componentDidMount(): void {
-    this.getData()
-    .then(data => {
-      this.setState(() => ({
-        data: data,
-      }))
-    })
-  }
-
-  getData = async () => {
-    try {
-      const response = await fetch(
-        'https://facebook.github.io/react-native/movies.json'
-      )
-      return await response.json()
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
+class PhotoList extends Component<Props> {
   openLink = (pNum: string) => {
     const url = Platform.select({
       ios: `telprompt:${pNum}`,
@@ -53,9 +22,6 @@ class PhotoList extends Component<Props, State> {
     return (
       <Fragment>
         <View>
-          <Text>
-            {JSON.stringify(this.state.data, null, 2)}
-          </Text>
           <Text onPress={() => this.openLink('01085593154')}>전화걸기</Text>
         </View>
       </Fragment>
